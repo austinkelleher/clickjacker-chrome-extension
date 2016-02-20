@@ -6,7 +6,10 @@
         "__dirname": true,
         "require": true,
         "module": true,
-        "exports": true
+        "exports": true,
+        "document": true,
+        "window": true,
+        "chrome": true
     },
     "strict": false,
     "globalstrict": true,

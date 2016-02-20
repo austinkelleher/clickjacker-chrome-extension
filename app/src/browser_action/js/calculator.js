@@ -1,10 +1,10 @@
 var calcButtonListeners = function(calcButton) {
     if (calcButton.value === '=') {
-        calcButton.addEventListener("click", function() {
+        calcButton.addEventListener('click', function() {
             document.calculator.ans.value = eval(document.calculator.ans.value); // jshint ignore:line
         });
     } else {
-        calcButton.addEventListener("click", function() {
+        calcButton.addEventListener('click', function() {
             document.calculator.ans.value += calcButton.value;
         });
     }
