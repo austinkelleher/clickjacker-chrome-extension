@@ -32,13 +32,13 @@
     {
       "matches": ["<all_urls>"],
       "js": [
-          "js/calculator-extension-loader.js"
+        "js/calculator-extension-loader.js"
       ],
       "run_at": "document_end",
       "all_frames": true
     }
   ],
   "web_accessible_resources": [
-      "js/calculator-extension.js"
+    "js/calculator-extension.js"
   ]
 }

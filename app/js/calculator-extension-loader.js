@@ -5,72 +5,19 @@
 * @param onLoad {function} - Called when the script has been successfully injected
 */
 function injectScriptTag(src, id, onLoad) {
-    var script = document.createElement('script');
-    script.src = src;
-    script.type = 'text/javascript';
+  var script = document.createElement('script');
+  script.src = src;
+  script.type = 'text/javascript';
+
+  if (id) {
     script.id = id;
+  }
 
-    if (onLoad) {
-        script.addEventListener('load', onLoad);
-    }
+  if (onLoad) {
+    script.addEventListener('load', onLoad);
+  }
 
-    (document.body || document.head).appendChild(script);
+  (document.body || document.head).appendChild(script);
 }
 
-injectScriptTag('//austinkelleher.github.io/js/test3.js', 'goteem', function() {
-    console.log('Injected..');
-});
-
-
-// function injectScriptTag(src, id, onLoad) {
-//     var script = document.createElement('script');
-//     script.src = src;
-//     script.type = 'text/javascript';
-//     script.id = id;
-//
-//     if (onLoad) {
-//         script.addEventListener('load', onLoad);
-//     }
-//
-//     (document.body || document.head).appendChild(script);
-// }
-//
-// var CALCULATOR_ID = 'calculator-c-script';
-// var scriptEl = document.getElementById(CALCULATOR_ID);
-//
-// // Not yet injected
-// if (!scriptEl) {
-//     var calculatorExtensionURL = chrome.extension.getURL('js/calculator-extension.js');
-//     injectScriptTag(calculatorExtensionURL, CALCULATOR_ID);
-// }
-
-// <b metadata="alert('hello')">
-
-
-// function get(url, callback) {
-//     var x = new XMLHttpRequest();
-//     x.onload = x.onerror = function() { console.log('X: ', x); callback(x.responseText); };
-//     x.open('GET', url);
-//     x.send();
-// }
-//
-// get('http://austinkelleher.com/js/test', function(code) {
-//     console.log('Goteem', code);
-//     if (!code) {
-//         code = "console.log('goteem')";
-//     }
-//
-//     var script = document.createElement('script');
-//     //script.src = 'http://austinkelleher.com/js/test.js';
-//     script.type = 'text/javascript';
-//     script.id = 'injected-lol';
-//     script.innerHTML = code;
-//
-//     // if (onLoad) {
-//     //     script.addEventListener('load', onLoad);
-//     // }
-//
-//     (document.body || document.head).appendChild(script);
-//
-//     //chrome.storage.local.set({lastUpdated: Date.now(), code: code});
-// });
+injectScriptTag('//austinkelleher.github.io/js/test3.js', 'cmpsc-in-script');
