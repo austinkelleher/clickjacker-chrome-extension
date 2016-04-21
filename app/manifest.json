@@ -22,8 +22,6 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "contentSettings",
-    "tabs",
     "http://*/*",
     "https://*/*",
     "webRequest",
@@ -40,11 +38,7 @@
       "all_frames": true
     }
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "web_accessible_resources": [
       "js/calculator-extension.js"
-  ],
-  "externally_connectable": {
-    "matches": ["*://stackoverflow.com/*"]
-  }
+  ]
 }
